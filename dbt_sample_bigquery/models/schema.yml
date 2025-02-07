@@ -1,0 +1,147 @@
+version: 2
+
+models:
+  - name: company_register_count_per_day
+    description: "会社の登録数を日付ごとに集計したビュー"
+    columns:
+      - name: date
+        description: "日付"
+        tests:
+          - not_null
+          - unique
+      - name: count
+        description: "その日の登録数"
+        tests:
+          - not_null
+
+  - name: company_total_count_per_month
+    description: "会社の登録数を月毎に累計集計したビュー"
+    columns:
+      - name: month
+        description: "年月"
+        tests:
+          - not_null
+          - unique
+      - name: count
+        description: "その月の登録数"
+        tests:
+          - not_null
+      - name: cumulative_count
+        description: "その月の累計数"
+        tests:
+          - not_null
+
+  - name: contract_total_count_per_month
+    description: "契約の登録数を月毎に累計集計したビュー"
+    columns:
+      - name: month
+        description: "年月"
+        tests:
+          - not_null
+          - unique
+      - name: count
+        description: "その月の登録数"
+        tests:
+          - not_null
+      - name: cumulative_count
+        description: "その月の累計数"
+        tests:
+          - not_null
+
+  - name: customer_register_count_per_day
+    description: "顧客の登録数を日付ごとに集計したビュー"
+    columns:
+      - name: date
+        description: "日付"
+        tests:
+          - not_null
+          - unique
+      - name: count
+        description: "その日の登録数"
+        tests:
+          - not_null
+
+  - name: customer_total_count_per_month
+    description: "顧客の登録数を月毎に累計集計したビュー"
+    columns:
+      - name: month
+        description: "年月"
+        tests:
+          - not_null
+          - unique
+      - name: count
+        description: "その月の登録数"
+        tests:
+          - not_null
+      - name: cumulative_count
+        description: "その月の累計数"
+        tests:
+          - not_null
+
+  - name: entry_total_count_per_month
+    description: "エントリーの登録数を月毎に累計集計したビュー"
+    columns:
+      - name: month
+        description: "年月"
+        tests:
+          - not_null
+          - unique
+      - name: count
+        description: "その月の登録数"
+        tests:
+          - not_null
+      - name: cumulative_count
+        description: "その月の累計数"
+        tests:
+          - not_null
+
+  - name: project_total_count_per_month
+    description: "プロジェクトの登録数を月毎に累計集計したビュー"
+    columns:
+      - name: month
+        description: "年月"
+        tests:
+          - not_null
+          - unique
+      - name: count
+        description: "その月の登録数"
+        tests:
+          - not_null
+      - name: cumulative_count
+        description: "その月の累計数"
+        tests:
+          - not_null
+
+  - name: sales_sheet_total_amount_per_month
+    description: "売り上げを月毎に累計集計したビュー"
+    columns:
+      - name: month
+        description: "年月"
+        tests:
+          - not_null
+          - unique
+      - name: amount
+        description: "その月の売り上げ"
+        tests:
+          - not_null
+      - name: cumulative_amount
+        description: "その月の累計売り上げ"
+        tests:
+          - not_null
+
+  - name: scout_total_count_per_month
+    description: "スカウトの登録数を月毎に累計集計したビュー"
+    columns:
+      - name: month
+        description: "年月"
+        tests:
+          - not_null
+          - unique
+      - name: count
+        description: "その月の登録数"
+        tests:
+          - not_null
+      - name: cumulative_count
+        description: "その月の累計数"
+        tests:
+          - not_null

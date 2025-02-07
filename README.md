@@ -1,6 +1,6 @@
 # dbt sample
 
-setup
+## setup
 
 ```shell
 python3 -m venv venv
@@ -29,10 +29,17 @@ dbt_sample_bigquery:
   target: dev
 ```
 
-run
+## execution
 
 ```shell
 dbt debug
 dbt compile
 dbt run
+```
+
+## test
+
+```shell
+dbt deps
+dbt test
 ```
